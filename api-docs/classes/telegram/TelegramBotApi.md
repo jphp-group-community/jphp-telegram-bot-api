@@ -35,6 +35,7 @@
 - `->`[`kickChatMember()`](#method-kickchatmember)
 - `->`[`unbanChatMember()`](#method-unbanchatmember)
 - `->`[`getUpdates()`](#method-getupdates)
+- `->`[`answerCallbackQuery()`](#method-answercallbackquery)
 - `->`[`setProxy()`](#method-setproxy)
 - `->`[`getProxy()`](#method-getproxy)
 - `->`[`setToken()`](#method-settoken)
@@ -213,6 +214,15 @@ unbanChatMember(): TUnbanChatMemberQuery
 ### getUpdates()
 ```php
 getUpdates(): TGetUpdatesQuery
+```
+
+---
+
+<a name="method-answercallbackquery"></a>
+
+### answerCallbackQuery()
+```php
+answerCallbackQuery(): TAnswerCallbackQuery
 ```
 
 ---

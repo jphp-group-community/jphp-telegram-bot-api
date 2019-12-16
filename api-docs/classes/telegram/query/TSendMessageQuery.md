@@ -14,6 +14,7 @@
 - `->`[`disable_web_page_preview()`](#method-disable_web_page_preview)
 - `->`[`disable_notification()`](#method-disable_notification)
 - `->`[`reply_to_message_id()`](#method-reply_to_message_id)
+- `->`[`reply_markup()`](#method-reply_markup)
 - `->`[`query()`](#method-query)
 - See also in the parent class [TBaseQuery](classes/telegram/query/TBaseQuery.md)
 
@@ -79,6 +80,15 @@ disable_notification(mixed $value): TSendMessageQuery
 ### reply_to_message_id()
 ```php
 reply_to_message_id(mixed $value): TSendMessageQuery
+```
+
+---
+
+<a name="method-reply_markup"></a>
+
+### reply_markup()
+```php
+reply_markup(mixed $value): TSendMessageQuery
 ```
 
 ---
