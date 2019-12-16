@@ -33,7 +33,7 @@ config:
   - /LICENSE
 
 develnext-bundle:
-  version: 1.0.0
+  version: 1.1.0
   name: Telegram Bot API
   author: broelik
   icon: "develnext/bundle/telegram/icon32.png"

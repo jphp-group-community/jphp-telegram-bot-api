@@ -17,6 +17,7 @@ use php\net\URL;
 use php\net\URLConnection;
 use telegram\exception\TelegramError;
 use telegram\exception\TelegramException;
+use telegram\query\TAnswerCallbackQuery;
 use telegram\query\TForwardMessageQuery;
 use telegram\query\TGetFileQuery;
 use telegram\query\TGetMeQuery;
@@ -163,6 +164,13 @@ class TelegramBotApi{
         return new TGetUpdatesQuery($this);
     }
 
+    /**
+     * @return TAnswerCallbackQuery
+     */
+    function answerCallbackQuery(){
+        return new TAnswerCallbackQuery($this);
+    }
+
 
     function setProxy(?Proxy $proxy){
         $this->proxy = $proxy;
@@ -196,10 +204,14 @@ class TelegramBotApi{
             else{
                 $connection->getOutputStream()->write($this->json->format($args));
             }
+
             if($connection->responseCode != 200){
-                throw new TelegramException("Server response invalid status code {$connection->responseCode}");
+                $rawResponse = $connection->getErrorStream()->readFully();
+                if(strlen($rawResponse) == 0) throw new TelegramException("Server response invalid status code {$connection->responseCode}");
+            } else {
+                $rawResponse = $connection->getInputStream()->readFully();
             }
-            $rawResponse = $connection->getInputStream()->readFully();
+
             $connection->disconnect();
             $response = $this->json->parse($rawResponse);
             if(!$response->ok){
