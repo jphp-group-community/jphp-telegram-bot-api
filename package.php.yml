@@ -12,6 +12,7 @@ sources:
 plugins:
 - Doc
 - Hub
+- DevelNextBundle
 
 config:
   ignore:

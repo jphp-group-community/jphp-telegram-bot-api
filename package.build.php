@@ -8,7 +8,7 @@ use packager\Event;
 /**
  * @jppm-task create-bundle
  */
-function task_hubPublish(Event $e)
+function task_CreateBundle(Event $e)
 {
     $package = $e->package();
     $data = $package->getAny('develnext-bundle');
