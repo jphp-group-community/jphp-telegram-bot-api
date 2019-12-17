@@ -1,10 +1,10 @@
 ## telegram-bot-api
-> version 1.0.0, created by JPPM.
+> version 1.1.0, created by JPPM.
 
 
 ### Install
 ```
-jppm add telegram-bot-api@1.0.0
+jppm add telegram-bot-api@1.1.0
 ```
 
 ### API
@@ -15,6 +15,14 @@ jppm add telegram-bot-api@1.0.0
 - [`TelegramError`](classes/telegram/exception/TelegramError.md)
 - [`TelegramException`](classes/telegram/exception/TelegramException.md)
 
+#### `telegram\object\markup`
+
+- [`AbstractMarkup`](classes/telegram/object/markup/AbstractMarkup.md)
+- [`TForceReply`](classes/telegram/object/markup/TForceReply.md)- _Shows reply interface to the user, as if they manually selected the bot‘s message and tapped 'Reply'_
+- [`TInlineKeyboard`](classes/telegram/object/markup/TInlineKeyboard.md)- _This object represents an inline keyboard that appears right next to the message it belongs to._
+- [`TReplyKeyboard`](classes/telegram/object/markup/TReplyKeyboard.md)- _This object represents a custom keyboard with reply options_
+- [`TReplyKeyboardRemove`](classes/telegram/object/markup/TReplyKeyboardRemove.md)- _Upon receiving a message with this object, Telegram clients will remove the current custom keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden immediately after the user presses a button_
+
 #### `telegram\object`
 
 - [`TAudio`](classes/telegram/object/TAudio.md)
@@ -23,6 +31,7 @@ jppm add telegram-bot-api@1.0.0
 - [`TDocument`](classes/telegram/object/TDocument.md)
 - [`TFile`](classes/telegram/object/TFile.md)
 - [`TLocation`](classes/telegram/object/TLocation.md)
+- [`TMarkup`](classes/telegram/object/TMarkup.md)
 - [`TMessage`](classes/telegram/object/TMessage.md)
 - [`TMessageEntity`](classes/telegram/object/TMessageEntity.md)
 - [`TPhotoSize`](classes/telegram/object/TPhotoSize.md)
@@ -36,6 +45,7 @@ jppm add telegram-bot-api@1.0.0
 
 #### `telegram\query`
 
+- [`TAnswerCallbackQuery`](classes/telegram/query/TAnswerCallbackQuery.md)- _Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned._
 - [`TBaseQuery`](classes/telegram/query/TBaseQuery.md)
 - [`TEditMessageTextQuery`](classes/telegram/query/TEditMessageTextQuery.md)
 - [`TForwardMessageQuery`](classes/telegram/query/TForwardMessageQuery.md)
