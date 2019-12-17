@@ -2,7 +2,7 @@
 Расширение для работы с Telegram Bot API
 ## Установка
 ```
-jppm add telegram-bot-api
+jppm add telegram-bot-api@git+https://github.com/jphp-group/jphp-telegram-bot-api
 ```
 ## Примеры
 ### Инициализация API
@@ -109,7 +109,7 @@ $api->sendMessage()
 ```
 
 ## Расширение для DevelNext
-[Скачать](https://github.com/broelik/jphp-telegram-bot-api/releases/latest)
+[Скачать](https://github.com/jphp-group/jphp-telegram-bot-api/releases/latest)
 
 ## Дополнительно
 
