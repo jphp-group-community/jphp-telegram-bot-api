@@ -108,6 +108,9 @@ $api->sendMessage()
 	->query();
 ```
 
+## Использование прокси сервера
+[PHP proxy for Telegram Bot API](https://github.com/TsSaltan/Telegram-bot-api-php-proxy)
+
 ## Расширение для DevelNext
 [Скачать](https://github.com/broelik/jphp-telegram-bot-api/releases/latest)
 
