@@ -20,6 +20,7 @@ class TGetFileQuery extends TBaseQuery{
     }
 
     /**
+     * @todo change domain for downloading file
      * @return TFile
      */
     function query(){

@@ -38,7 +38,8 @@ use telegram\query\TSendVoiceQuery;
 use telegram\query\TUnbanChatMemberQuery;
 
 class TelegramBotApi{
-    private $baseURL = 'https://api.telegram.org/bot%s/%s';
+    private $apiURL = 'https://api.telegram.org';
+    private $baseURL = '%s/bot%s/%s';
     private $token;
     /**
      * @var Proxy
@@ -55,6 +56,18 @@ class TelegramBotApi{
         $this->token = $token;
         $this->json = new JsonProcessor;
     }
+
+    /**
+     * @param string $url
+     * @return TelegramBotApi
+     */
+    function setApiURL(string $url){
+        if(!str::startsWith($url, 'https://')) throw new TelegramException('HTTPS protocol required');
+        if(str::endsWith($url, '/')) $url = str::sub($url, 0, str::length($url)-1);
+        $this->apiURL = $url;
+        return $this;
+    }
+
     /**
      * @return TGetMeQuery
      */
@@ -264,7 +277,7 @@ class TelegramBotApi{
      * @return URLConnection
      */
     private function createConnection(string $method, bool $multipart = false, ?string $boundary = null){
-        $connection = URLConnection::create(str::format($this->baseURL, $this->token, $method), $this->proxy);
+        $connection = URLConnection::create(str::format($this->baseURL, $this->apiURL, $this->token, $method), $this->proxy);
         $connection->doInput = true;
         $connection->doOutput = true;
         $connection->requestMethod = 'POST';
