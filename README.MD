@@ -1,3 +1,6 @@
+https://github.com/jphp-group/jphp-telegram-bot-api   
+https://github.com/broelik/jphp-telegram-bot-api
+
 # TelegramBotApi
 Расширение для работы с Telegram Bot API
 ## Установка
